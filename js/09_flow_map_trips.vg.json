@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Origin-destination flow map of team trips between cities, with a season slider.",
+  "width": 520,
+  "height": 470,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [-18, -36],
+    "rotate": [-134, 0],
+    "center": [0, -27.5],
+    "scale": 745,
+    "translate": [262, 235]
+  },
+  "params": [
+    {
+      "name": "season",
+      "value": 2026,
+      "bind": {"input": "range", "min": 2010, "max": 2026, "step": 1, "name": "Season: "}
+    }
+  ],
+  "layer": [
+    {
+      "data": {"url": "data/aus_states.topojson", "format": {"type": "topojson", "feature": "states"}},
+      "mark": {"type": "geoshape", "fill": "#f0efec", "stroke": "white", "strokeWidth": 1.5}
+    },
+    {
+      "data": {"url": "data/flows.csv"},
+      "transform": [
+        {"filter": "datum.year == season"},
+        {"calculate": "datum.a + ' ↔ ' + datum.b", "as": "route"}
+      ],
+      "mark": {"type": "rule", "color": "#111111", "opacity": 0.55},
+      "encoding": {
+        "latitude": {"field": "lat_a", "type": "quantitative"},
+        "longitude": {"field": "lon_a", "type": "quantitative"},
+        "latitude2": {"field": "lat_b"},
+        "longitude2": {"field": "lon_b"},
+        "strokeWidth": {
+          "field": "trips",
+          "type": "quantitative",
+          "title": "Team trips in the season",
+          "scale": {"domain": [0, 41], "range": [0, 14]},
+          "legend": {"orient": "top-left", "values": [10, 25, 40]}
+        },
+        "tooltip": [
+          {"field": "route", "title": "Route"},
+          {"field": "trips", "title": "Team trips"},
+          {"field": "a_to_b", "title": "From first city"},
+          {"field": "b_to_a", "title": "From second city"}
+        ]
+      }
+    },
+    {
+      "data": {"url": "data/cities.csv"},
+      "encoding": {
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "longitude": {"field": "lon", "type": "quantitative"}
+      },
+      "layer": [
+        {
+          "mark": {"type": "circle", "size": 26, "color": "#0b0b0b", "opacity": 1},
+          "encoding": {"tooltip": [{"field": "city", "title": "City"}]}
+        },
+        {
+          "transform": [
+            {
+              "filter": {
+                "field": "city",
+                "oneOf": [
+                  "Perth",
+                  "Darwin",
+                  "Sydney",
+                  "Adelaide",
+                  "Melbourne",
+                  "Hobart",
+                  "Alice Springs",
+                  "Cairns",
+                  "Canberra"
+                ]
+              }
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "dy": -6,
+            "color": "#0b0b0b",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "align": "left",
+            "dx": 6
+          },
+          "encoding": {"text": {"field": "city"}}
+        },
+        {
+          "transform": [{"filter": "datum.city == 'Brisbane'"}],
+          "mark": {
+            "type": "text",
+            "dy": -7,
+            "color": "#0b0b0b",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "align": "right",
+            "dx": -6
+          },
+          "encoding": {"text": {"field": "city"}}
+        }
+      ]
+    },
+    {
+      "data": {"url": "data/flows.csv"},
+      "transform": [
+        {"filter": "datum.year == season"},
+        {"aggregate": [{"op": "sum", "field": "trips", "as": "n"}]},
+        {"calculate": "season + ': ' + datum.n + ' team trips'", "as": "label"}
+      ],
+      "mark": {"type": "text", "align": "left", "color": "#0b0b0b", "fontWeight": 600, "fontSize": 13},
+      "encoding": {"x": {"value": 4}, "y": {"value": 445}, "text": {"field": "label"}}
+    },
+    {
+      "data": {"values": [{"label": "Clubs relocated to hubs, mostly in Queensland"}]},
+      "transform": [{"filter": "season == 2020"}],
+      "mark": {"type": "text", "align": "left", "color": "#a87900", "fontWeight": 600, "fontSize": 12},
+      "encoding": {"x": {"value": 4}, "y": {"value": 462}, "text": {"field": "label"}}
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+rule,year,before_year,after_year,before,after,change
+Interchange capped at 120,2014,2013,2014,184.8,173.8,-11.0
+Cap cut to 90,2016,2015,2016,172.8,177.3,4.5
+6-6-6 starting positions,2019,2018,2019,166.2,160.4,-5.8
+"Stand rule, cap cut to 75",2021,2019,2021,160.4,159.5,-0.9
+"Last-disposal rule, new centre ball-up",2026,2025,2026,168.8,178.6,9.8

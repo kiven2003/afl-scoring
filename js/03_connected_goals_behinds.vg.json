@@ -1,0 +1,91 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Goals and behinds per game, one point per season, joined in time order.",
+  "width": "container",
+  "height": 360,
+  "data": {"url": "data/seasons.csv"},
+  "transform": [{"filter": "datum.year >= 1950"}],
+  "encoding": {
+    "x": {
+      "field": "goals",
+      "type": "quantitative",
+      "title": "Goals per game (both teams)",
+      "scale": {"zero": false, "nice": true}
+    },
+    "y": {
+      "field": "behinds",
+      "type": "quantitative",
+      "title": "Behinds per game (both teams)",
+      "scale": {"zero": false, "nice": true}
+    },
+    "tooltip": [
+      {"field": "year", "title": "Season", "format": "d"},
+      {"field": "goals", "title": "Goals per game", "format": ".1f"},
+      {"field": "behinds", "title": "Behinds per game", "format": ".1f"}
+    ]
+  },
+  "layer": [
+    {
+      "transform": [{"filter": "datum.short == 0"}],
+      "mark": {"type": "line", "color": "#c3c2b7", "strokeWidth": 1.5},
+      "encoding": {"order": {"field": "year", "type": "quantitative"}}
+    },
+    {
+      "transform": [{"filter": "datum.short == 0"}],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 55,
+        "stroke": "white",
+        "strokeWidth": 1,
+        "opacity": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "year",
+          "type": "quantitative",
+          "title": "Season",
+          "scale": {"range": ["#fff3b0", "#111111"]},
+          "legend": {
+            "format": "d",
+            "orient": "bottom-right",
+            "direction": "horizontal",
+            "gradientLength": 130
+          }
+        }
+      }
+    },
+    {
+      "transform": [{"filter": "datum.short == 1"}],
+      "mark": {"type": "point", "size": 70, "color": "#a87900", "strokeWidth": 2}
+    },
+    {
+      "transform": [{"filter": {"field": "year", "oneOf": [1897, 1925, 1982, 2020, 2021, 2026]}}],
+      "encoding": {"text": {"field": "year", "type": "quantitative", "format": "d"}},
+      "mark": {
+        "type": "text",
+        "dx": 8,
+        "dy": -8,
+        "align": "left",
+        "color": "white",
+        "stroke": "white",
+        "strokeWidth": 4,
+        "fontWeight": 600,
+        "fontSize": 12
+      }
+    },
+    {
+      "transform": [{"filter": {"field": "year", "oneOf": [1897, 1925, 1982, 2020, 2021, 2026]}}],
+      "encoding": {"text": {"field": "year", "type": "quantitative", "format": "d"}},
+      "mark": {
+        "type": "text",
+        "dx": 8,
+        "dy": -8,
+        "align": "left",
+        "color": "#0b0b0b",
+        "fontWeight": 600,
+        "fontSize": 12
+      }
+    }
+  ]
+}

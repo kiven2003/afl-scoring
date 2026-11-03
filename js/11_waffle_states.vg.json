@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Waffle chart: each of the 100 squares is 1% of the latest season's games, coloured by state.",
+  "width": 400,
+  "height": 400,
+  "data": {"url": "data/waffle.csv"},
+  "transform": [{"calculate": "datum.state + ' ' + format(datum.pct, '.0f') + '%'", "as": "label"}],
+  "mark": {"type": "rect", "cornerRadius": 3, "stroke": "white", "strokeWidth": 3},
+  "encoding": {
+    "x": {"field": "col", "type": "ordinal", "axis": null},
+    "y": {"field": "row", "type": "ordinal", "axis": null},
+    "color": {
+      "field": "label",
+      "type": "nominal",
+      "title": null,
+      "scale": {
+        "domain": [
+          "Victoria 49%",
+          "South Australia 15%",
+          "Western Australia 12%",
+          "New South Wales 10%",
+          "Queensland 10%",
+          "Tas, ACT and NT 5%"
+        ],
+        "range": ["#111111", "#a87900", "#ffd200", "#8a8a84", "#f5e6a8", "#5c5c58"]
+      },
+      "legend": {"orient": "bottom", "columns": 3, "symbolType": "square", "labelLimit": 200}
+    },
+    "tooltip": [
+      {"field": "state", "title": "State"},
+      {"field": "games", "title": "Games in 2026"},
+      {"field": "pct", "title": "Share of games %", "format": ".1f"}
+    ]
+  }
+}

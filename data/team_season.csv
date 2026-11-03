@@ -1,0 +1,611 @@
+team,year,ppg,games
+Adelaide,1991,92.8,22
+Adelaide,1992,105.3,22
+Adelaide,1993,106.3,23
+Adelaide,1994,85.3,22
+Adelaide,1995,79.5,22
+Adelaide,1996,101.5,22
+Adelaide,1997,97.8,26
+Adelaide,1998,100.0,26
+Adelaide,1999,86.5,22
+Adelaide,2000,102.5,22
+Adelaide,2001,92.8,23
+Adelaide,2002,101.8,25
+Adelaide,2003,96.2,24
+Adelaide,2004,88.6,22
+Adelaide,2005,93.1,25
+Adelaide,2006,103.4,24
+Adelaide,2007,86.2,23
+Adelaide,2008,91.8,23
+Adelaide,2009,97.8,24
+Adelaide,2010,80.1,22
+Adelaide,2011,79.2,22
+Adelaide,2012,105.7,25
+Adelaide,2013,93.8,22
+Adelaide,2014,98.9,22
+Adelaide,2015,99.0,23
+Adelaide,2016,112.8,24
+Adelaide,2017,107.8,25
+Adelaide,2018,88.2,22
+Adelaide,2019,80.7,22
+Adelaide,2020,48.6,17
+Adelaide,2021,73.5,22
+Adelaide,2022,78.2,22
+Adelaide,2023,95.3,23
+Adelaide,2024,82.9,23
+Adelaide,2025,96.0,25
+Adelaide,2026,94.0,25
+Brisbane Lions,1990,78.8,22
+Brisbane Lions,1991,89.8,22
+Brisbane Lions,1992,80.5,22
+Brisbane Lions,1993,94.3,20
+Brisbane Lions,1994,88.2,22
+Brisbane Lions,1995,94.8,23
+Brisbane Lions,1996,100.8,25
+Brisbane Lions,1997,94.1,23
+Brisbane Lions,1998,84.5,22
+Brisbane Lions,1999,110.6,25
+Brisbane Lions,2000,115.9,24
+Brisbane Lions,2001,114.8,25
+Brisbane Lions,2002,113.9,25
+Brisbane Lions,2003,104.0,26
+Brisbane Lions,2004,110.1,25
+Brisbane Lions,2005,97.2,22
+Brisbane Lions,2006,83.8,22
+Brisbane Lions,2007,90.3,22
+Brisbane Lions,2008,98.0,22
+Brisbane Lions,2009,91.0,24
+Brisbane Lions,2010,80.7,22
+Brisbane Lions,2011,82.5,22
+Brisbane Lions,2012,86.5,22
+Brisbane Lions,2013,87.4,22
+Brisbane Lions,2014,69.6,22
+Brisbane Lions,2015,70.8,22
+Brisbane Lions,2016,80.5,22
+Brisbane Lions,2017,85.3,22
+Brisbane Lions,2018,83.0,22
+Brisbane Lions,2019,89.5,24
+Brisbane Lions,2020,68.2,19
+Brisbane Lions,2021,94.5,24
+Brisbane Lions,2022,95.8,25
+Brisbane Lions,2023,94.9,26
+Brisbane Lions,2024,94.4,27
+Brisbane Lions,2025,91.0,27
+Brisbane Lions,2026,109.6,27
+Carlton,1990,103.5,22
+Carlton,1991,85.4,22
+Carlton,1992,107.4,22
+Carlton,1993,112.6,23
+Carlton,1994,105.0,24
+Carlton,1995,108.2,25
+Carlton,1996,94.1,24
+Carlton,1997,89.9,22
+Carlton,1998,91.7,22
+Carlton,1999,95.0,26
+Carlton,2000,119.4,25
+Carlton,2001,103.5,24
+Carlton,2002,76.5,22
+Carlton,2003,81.1,22
+Carlton,2004,83.0,22
+Carlton,2005,91.6,22
+Carlton,2006,81.4,22
+Carlton,2007,98.5,22
+Carlton,2008,100.8,22
+Carlton,2009,103.2,23
+Carlton,2010,97.3,23
+Carlton,2011,103.0,24
+Carlton,2012,94.5,22
+Carlton,2013,96.0,24
+Carlton,2014,86.0,22
+Carlton,2015,69.3,22
+Carlton,2016,71.3,22
+Carlton,2017,72.5,22
+Carlton,2018,61.5,22
+Carlton,2019,73.1,22
+Carlton,2020,59.8,17
+Carlton,2021,79.4,22
+Carlton,2022,84.4,22
+Carlton,2023,82.0,26
+Carlton,2024,92.6,24
+Carlton,2025,78.2,23
+Carlton,2026,86.2,25
+Collingwood,1990,107.6,26
+Collingwood,1991,106.8,22
+Collingwood,1992,99.0,23
+Collingwood,1993,104.3,20
+Collingwood,1994,91.2,23
+Collingwood,1995,92.9,22
+Collingwood,1996,100.1,22
+Collingwood,1997,97.2,22
+Collingwood,1998,89.5,22
+Collingwood,1999,89.7,22
+Collingwood,2000,95.0,22
+Collingwood,2001,101.5,22
+Collingwood,2002,93.8,25
+Collingwood,2003,100.8,25
+Collingwood,2004,86.3,22
+Collingwood,2005,85.6,22
+Collingwood,2006,105.4,23
+Collingwood,2007,92.6,25
+Collingwood,2008,102.7,24
+Collingwood,2009,94.2,25
+Collingwood,2010,106.5,26
+Collingwood,2011,112.9,25
+Collingwood,2012,94.5,25
+Collingwood,2013,96.1,23
+Collingwood,2014,80.3,22
+Collingwood,2015,89.6,22
+Collingwood,2016,86.8,22
+Collingwood,2017,88.4,22
+Collingwood,2018,90.6,26
+Collingwood,2019,83.2,24
+Collingwood,2020,56.5,19
+Collingwood,2021,70.8,22
+Collingwood,2022,83.4,25
+Collingwood,2023,90.4,26
+Collingwood,2024,86.6,23
+Collingwood,2025,85.6,25
+Collingwood,2026,88.1,24
+Essendon,1990,109.7,25
+Essendon,1991,99.0,23
+Essendon,1992,101.9,22
+Essendon,1993,116.0,24
+Essendon,1994,94.3,22
+Essendon,1995,108.8,24
+Essendon,1996,100.9,25
+Essendon,1997,91.1,22
+Essendon,1998,100.4,23
+Essendon,1999,109.4,24
+Essendon,2000,131.0,25
+Essendon,2001,112.8,25
+Essendon,2002,87.9,24
+Essendon,2003,97.3,24
+Essendon,2004,102.1,24
+Essendon,2005,96.3,22
+Essendon,2006,91.9,22
+Essendon,2007,99.3,22
+Essendon,2008,96.8,22
+Essendon,2009,93.5,23
+Essendon,2010,87.7,22
+Essendon,2011,100.2,23
+Essendon,2012,95.0,22
+Essendon,2013,97.5,22
+Essendon,2014,83.0,23
+Essendon,2015,71.8,22
+Essendon,2016,65.3,22
+Essendon,2017,95.3,23
+Essendon,2018,87.8,22
+Essendon,2019,76.7,23
+Essendon,2020,55.2,17
+Essendon,2021,86.5,23
+Essendon,2022,79.0,22
+Essendon,2023,79.9,23
+Essendon,2024,82.3,23
+Essendon,2025,66.7,23
+Essendon,2026,69.6,23
+Fremantle,1995,93.2,22
+Fremantle,1996,83.2,22
+Fremantle,1997,79.5,22
+Fremantle,1998,79.0,22
+Fremantle,1999,90.0,22
+Fremantle,2000,85.7,22
+Fremantle,2001,81.5,22
+Fremantle,2002,86.4,22
+Fremantle,2003,95.7,23
+Fremantle,2004,85.5,22
+Fremantle,2005,92.8,22
+Fremantle,2006,92.8,25
+Fremantle,2007,102.5,22
+Fremantle,2008,90.4,22
+Fremantle,2009,79.4,22
+Fremantle,2010,97.0,24
+Fremantle,2011,81.4,22
+Fremantle,2012,88.5,24
+Fremantle,2013,91.3,25
+Fremantle,2014,90.9,24
+Fremantle,2015,83.0,24
+Fremantle,2016,71.5,22
+Fremantle,2017,73.0,22
+Fremantle,2018,70.7,22
+Fremantle,2019,71.8,22
+Fremantle,2020,50.9,17
+Fremantle,2021,71.7,22
+Fremantle,2022,78.0,24
+Fremantle,2023,79.8,23
+Fremantle,2024,85.4,23
+Fremantle,2025,85.7,24
+Fremantle,2026,97.0,27
+Geelong,1990,102.2,22
+Geelong,1991,116.8,25
+Geelong,1992,136.8,26
+Geelong,1993,117.7,20
+Geelong,1994,107.2,26
+Geelong,1995,116.9,25
+Geelong,1996,105.4,23
+Geelong,1997,93.3,24
+Geelong,1998,80.8,22
+Geelong,1999,105.8,22
+Geelong,2000,100.7,23
+Geelong,2001,87.5,22
+Geelong,2002,87.9,22
+Geelong,2003,82.7,22
+Geelong,2004,92.0,25
+Geelong,2005,96.0,24
+Geelong,2006,90.1,22
+Geelong,2007,118.1,25
+Geelong,2008,118.5,25
+Geelong,2009,104.3,25
+Geelong,2010,112.4,25
+Geelong,2011,115.3,25
+Geelong,2012,99.5,23
+Geelong,2013,107.0,25
+Geelong,2014,91.4,24
+Geelong,2015,88.2,21
+Geelong,2016,99.2,24
+Geelong,2017,93.9,25
+Geelong,2018,90.9,23
+Geelong,2019,87.6,25
+Geelong,2020,71.8,21
+Geelong,2021,81.3,25
+Geelong,2022,99.1,25
+Geelong,2023,90.8,23
+Geelong,2024,95.5,25
+Geelong,2025,104.9,26
+Geelong,2026,102.7,25
+Gold Coast,2011,69.7,22
+Gold Coast,2012,68.6,22
+Gold Coast,2013,87.2,22
+Gold Coast,2014,87.1,22
+Gold Coast,2015,74.2,22
+Gold Coast,2016,80.8,22
+Gold Coast,2017,79.8,22
+Gold Coast,2018,59.5,22
+Gold Coast,2019,61.4,22
+Gold Coast,2020,58.6,17
+Gold Coast,2021,65.0,22
+Gold Coast,2022,85.0,22
+Gold Coast,2023,80.0,23
+Gold Coast,2024,83.7,23
+Gold Coast,2025,92.0,25
+Gold Coast,2026,87.4,23
+Greater Western Sydney,2012,57.7,22
+Greater Western Sydney,2013,69.3,22
+Greater Western Sydney,2014,80.9,22
+Greater Western Sydney,2015,85.1,22
+Greater Western Sydney,2016,106.4,24
+Greater Western Sydney,2017,92.8,25
+Greater Western Sydney,2018,84.8,24
+Greater Western Sydney,2019,84.7,26
+Greater Western Sydney,2020,59.2,17
+Greater Western Sydney,2021,79.6,24
+Greater Western Sydney,2022,74.1,22
+Greater Western Sydney,2023,87.3,26
+Greater Western Sydney,2024,88.6,25
+Greater Western Sydney,2025,91.8,24
+Greater Western Sydney,2026,90.1,23
+Hawthorn,1990,107.7,23
+Hawthorn,1991,126.0,25
+Hawthorn,1992,115.9,23
+Hawthorn,1993,107.7,21
+Hawthorn,1994,99.1,23
+Hawthorn,1995,84.4,22
+Hawthorn,1996,86.0,23
+Hawthorn,1997,85.1,22
+Hawthorn,1998,90.5,22
+Hawthorn,1999,84.5,22
+Hawthorn,2000,99.6,24
+Hawthorn,2001,96.7,25
+Hawthorn,2002,88.1,22
+Hawthorn,2003,91.4,22
+Hawthorn,2004,75.8,22
+Hawthorn,2005,86.5,22
+Hawthorn,2006,83.4,22
+Hawthorn,2007,94.2,24
+Hawthorn,2008,111.8,25
+Hawthorn,2009,89.2,22
+Hawthorn,2010,91.7,23
+Hawthorn,2011,104.4,25
+Hawthorn,2012,119.7,25
+Hawthorn,2013,112.3,25
+Hawthorn,2014,111.8,25
+Hawthorn,2015,109.7,26
+Hawthorn,2016,95.9,24
+Hawthorn,2017,84.7,22
+Hawthorn,2018,87.8,24
+Hawthorn,2019,79.2,22
+Hawthorn,2020,59.1,17
+Hawthorn,2021,74.0,22
+Hawthorn,2022,81.2,22
+Hawthorn,2023,73.3,23
+Hawthorn,2024,90.4,25
+Hawthorn,2025,89.9,26
+Hawthorn,2026,98.2,25
+Melbourne,1990,104.7,24
+Melbourne,1991,106.1,24
+Melbourne,1992,94.7,22
+Melbourne,1993,105.0,20
+Melbourne,1994,100.4,25
+Melbourne,1995,88.1,22
+Melbourne,1996,79.2,22
+Melbourne,1997,67.1,22
+Melbourne,1998,92.6,25
+Melbourne,1999,84.1,22
+Melbourne,2000,115.4,25
+Melbourne,2001,97.1,22
+Melbourne,2002,103.5,24
+Melbourne,2003,86.3,22
+Melbourne,2004,96.8,23
+Melbourne,2005,97.0,23
+Melbourne,2006,96.2,24
+Melbourne,2007,85.9,22
+Melbourne,2008,74.0,22
+Melbourne,2009,77.5,22
+Melbourne,2010,84.7,22
+Melbourne,2011,89.7,22
+Melbourne,2012,71.8,22
+Melbourne,2013,66.1,22
+Melbourne,2014,60.7,22
+Melbourne,2015,71.5,22
+Melbourne,2016,88.4,22
+Melbourne,2017,92.5,22
+Melbourne,2018,101.3,25
+Melbourne,2019,71.3,22
+Melbourne,2020,62.5,17
+Melbourne,2021,89.8,25
+Melbourne,2022,86.8,24
+Melbourne,2023,88.1,25
+Melbourne,2024,77.6,23
+Melbourne,2025,82.7,23
+Melbourne,2026,98.2,24
+North Melbourne,1990,114.5,22
+North Melbourne,1991,111.6,22
+North Melbourne,1992,103.1,22
+North Melbourne,1993,127.0,21
+North Melbourne,1994,108.3,24
+North Melbourne,1995,104.4,25
+North Melbourne,1996,116.1,25
+North Melbourne,1997,92.0,25
+North Melbourne,1998,110.1,25
+North Melbourne,1999,112.4,25
+North Melbourne,2000,109.4,25
+North Melbourne,2001,98.2,22
+North Melbourne,2002,101.1,23
+North Melbourne,2003,99.3,22
+North Melbourne,2004,97.4,22
+North Melbourne,2005,92.6,23
+North Melbourne,2006,79.7,22
+North Melbourne,2007,94.9,25
+North Melbourne,2008,95.5,23
+North Melbourne,2009,76.4,22
+North Melbourne,2010,87.7,22
+North Melbourne,2011,95.7,22
+North Melbourne,2012,105.4,23
+North Melbourne,2013,104.9,22
+North Melbourne,2014,91.3,25
+North Melbourne,2015,92.0,25
+North Melbourne,2016,88.5,23
+North Melbourne,2017,90.1,22
+North Melbourne,2018,88.6,22
+North Melbourne,2019,82.9,22
+North Melbourne,2020,50.5,17
+North Melbourne,2021,66.3,22
+North Melbourne,2022,60.8,22
+North Melbourne,2023,72.0,23
+North Melbourne,2024,70.4,23
+North Melbourne,2025,78.5,23
+North Melbourne,2026,84.0,23
+Port Adelaide,1997,84.2,22
+Port Adelaide,1998,87.6,22
+Port Adelaide,1999,82.9,23
+Port Adelaide,2000,87.6,22
+Port Adelaide,2001,108.2,24
+Port Adelaide,2002,104.8,25
+Port Adelaide,2003,98.7,25
+Port Adelaide,2004,109.5,25
+Port Adelaide,2005,93.0,24
+Port Adelaide,2006,86.9,22
+Port Adelaide,2007,102.4,25
+Port Adelaide,2008,96.3,22
+Port Adelaide,2009,90.5,22
+Port Adelaide,2010,79.5,22
+Port Adelaide,2011,78.1,22
+Port Adelaide,2012,76.9,22
+Port Adelaide,2013,92.4,24
+Port Adelaide,2014,100.4,25
+Port Adelaide,2015,91.0,22
+Port Adelaide,2016,93.4,22
+Port Adelaide,2017,97.6,23
+Port Adelaide,2018,80.9,22
+Port Adelaide,2019,82.1,22
+Port Adelaide,2020,67.5,19
+Port Adelaide,2021,84.0,24
+Port Adelaide,2022,82.1,22
+Port Adelaide,2023,91.8,25
+Port Adelaide,2024,84.6,26
+Port Adelaide,2025,74.1,23
+Port Adelaide,2026,78.4,23
+Richmond,1990,90.4,22
+Richmond,1991,97.3,22
+Richmond,1992,98.2,22
+Richmond,1993,87.7,20
+Richmond,1994,92.4,22
+Richmond,1995,92.2,25
+Richmond,1996,103.7,22
+Richmond,1997,85.6,22
+Richmond,1998,91.7,22
+Richmond,1999,89.9,22
+Richmond,2000,94.0,22
+Richmond,2001,92.2,25
+Richmond,2002,81.9,22
+Richmond,2003,83.9,22
+Richmond,2004,77.0,22
+Richmond,2005,91.9,22
+Richmond,2006,87.9,22
+Richmond,2007,89.0,22
+Richmond,2008,101.3,22
+Richmond,2009,80.6,22
+Richmond,2010,77.9,22
+Richmond,2011,94.0,22
+Richmond,2012,98.6,22
+Richmond,2013,97.8,23
+Richmond,2014,85.3,23
+Richmond,2015,87.7,23
+Richmond,2016,77.9,22
+Richmond,2017,91.8,25
+Richmond,2018,95.7,24
+Richmond,2019,88.1,25
+Richmond,2020,66.5,21
+Richmond,2021,79.2,22
+Richmond,2022,98.7,23
+Richmond,2023,80.7,23
+Richmond,2024,65.4,23
+Richmond,2025,63.0,23
+Richmond,2026,64.5,23
+St Kilda,1990,105.8,22
+St Kilda,1991,113.4,23
+St Kilda,1992,108.2,24
+St Kilda,1993,102.0,20
+St Kilda,1994,82.2,22
+St Kilda,1995,82.5,22
+St Kilda,1996,93.3,22
+St Kilda,1997,105.1,25
+St Kilda,1998,95.5,24
+St Kilda,1999,89.9,22
+St Kilda,2000,84.3,22
+St Kilda,2001,87.1,22
+St Kilda,2002,81.1,22
+St Kilda,2003,95.2,22
+St Kilda,2004,108.3,25
+St Kilda,2005,105.7,24
+St Kilda,2006,93.3,23
+St Kilda,2007,85.2,22
+St Kilda,2008,94.3,25
+St Kilda,2009,96.2,25
+St Kilda,2010,85.6,26
+St Kilda,2011,84.7,23
+St Kilda,2012,106.7,22
+St Kilda,2013,79.6,22
+St Kilda,2014,67.3,22
+St Kilda,2015,77.0,22
+St Kilda,2016,88.8,22
+St Kilda,2017,87.5,22
+St Kilda,2018,73.0,22
+St Kilda,2019,74.8,22
+St Kilda,2020,67.1,19
+St Kilda,2021,74.7,22
+St Kilda,2022,77.4,22
+St Kilda,2023,77.2,24
+St Kilda,2024,76.0,23
+St Kilda,2025,80.0,23
+St Kilda,2026,88.3,23
+Sydney,1990,86.5,22
+Sydney,1991,107.3,22
+Sydney,1992,90.8,22
+Sydney,1993,91.8,20
+Sydney,1994,90.3,22
+Sydney,1995,105.2,22
+Sydney,1996,96.0,25
+Sydney,1997,94.7,23
+Sydney,1998,101.6,24
+Sydney,1999,97.3,23
+Sydney,2000,102.5,22
+Sydney,2001,95.4,23
+Sydney,2002,96.5,22
+Sydney,2003,95.8,24
+Sydney,2004,86.2,24
+Sydney,2005,86.5,26
+Sydney,2006,95.8,25
+Sydney,2007,92.1,23
+Sydney,2008,94.8,24
+Sydney,2009,85.8,22
+Sydney,2010,91.2,24
+Sydney,2011,86.0,24
+Sydney,2012,101.9,25
+Sydney,2013,98.2,25
+Sydney,2014,97.2,25
+Sydney,2015,88.2,24
+Sydney,2016,98.4,26
+Sydney,2017,93.9,24
+Sydney,2018,80.5,23
+Sydney,2019,77.5,22
+Sydney,2020,52.4,17
+Sydney,2021,89.5,23
+Sydney,2022,92.2,25
+Sydney,2023,88.2,24
+Sydney,2024,95.6,26
+Sydney,2025,80.2,23
+Sydney,2026,110.2,25
+West Coast,1990,100.7,26
+West Coast,1991,110.3,26
+West Coast,1992,102.1,25
+West Coast,1993,95.8,22
+West Coast,1994,96.8,25
+West Coast,1995,91.9,24
+West Coast,1996,99.7,24
+West Coast,1997,88.3,24
+West Coast,1998,86.6,23
+West Coast,1999,91.8,24
+West Coast,2000,100.7,22
+West Coast,2001,77.6,22
+West Coast,2002,99.4,23
+West Coast,2003,103.6,23
+West Coast,2004,90.3,23
+West Coast,2005,99.1,25
+West Coast,2006,100.9,26
+West Coast,2007,95.9,24
+West Coast,2008,75.9,22
+West Coast,2009,86.0,22
+West Coast,2010,80.6,22
+West Coast,2011,98.7,25
+West Coast,2012,102.8,24
+West Coast,2013,92.6,22
+West Coast,2014,93.0,22
+West Coast,2015,102.7,25
+West Coast,2016,97.1,23
+West Coast,2017,87.5,24
+West Coast,2018,91.9,25
+West Coast,2019,86.9,24
+West Coast,2020,65.0,18
+West Coast,2021,79.6,22
+West Coast,2022,65.0,22
+West Coast,2023,61.7,23
+West Coast,2024,69.3,23
+West Coast,2025,63.7,23
+West Coast,2026,70.2,23
+Western Bulldogs,1990,91.6,22
+Western Bulldogs,1991,82.5,22
+Western Bulldogs,1992,108.0,25
+Western Bulldogs,1993,98.9,20
+Western Bulldogs,1994,94.7,24
+Western Bulldogs,1995,84.9,23
+Western Bulldogs,1996,75.2,22
+Western Bulldogs,1997,96.2,24
+Western Bulldogs,1998,107.0,24
+Western Bulldogs,1999,104.0,24
+Western Bulldogs,2000,104.2,23
+Western Bulldogs,2001,104.8,22
+Western Bulldogs,2002,106.1,22
+Western Bulldogs,2003,91.5,22
+Western Bulldogs,2004,89.0,22
+Western Bulldogs,2005,108.4,22
+Western Bulldogs,2006,103.0,24
+Western Bulldogs,2007,96.0,22
+Western Bulldogs,2008,109.7,25
+Western Bulldogs,2009,104.8,25
+Western Bulldogs,2010,95.1,25
+Western Bulldogs,2011,93.6,22
+Western Bulldogs,2012,70.1,22
+Western Bulldogs,2013,87.5,22
+Western Bulldogs,2014,81.1,22
+Western Bulldogs,2015,95.8,23
+Western Bulldogs,2016,86.2,26
+Western Bulldogs,2017,84.4,22
+Western Bulldogs,2018,71.6,22
+Western Bulldogs,2019,86.8,23
+Western Bulldogs,2020,64.8,18
+Western Bulldogs,2021,90.0,26
+Western Bulldogs,2022,88.4,23
+Western Bulldogs,2023,83.4,23
+Western Bulldogs,2024,93.0,24
+Western Bulldogs,2025,108.4,23
+Western Bulldogs,2026,82.6,25

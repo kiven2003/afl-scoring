@@ -1,0 +1,97 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Each club's points per game by season since 1990. Darker cells mean higher scoring.",
+  "width": "container",
+  "height": 342,
+  "data": {"url": "data/team_season.csv"},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "values": ["1990", "1995", "2000", "2005", "2010", "2015", "2020", "2025"],
+        "grid": false,
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "y": {
+      "field": "team",
+      "type": "nominal",
+      "title": null,
+      "axis": {"domain": false, "ticks": false, "grid": false}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "rect", "stroke": "white", "strokeWidth": 1},
+      "encoding": {
+        "color": {
+          "field": "ppg",
+          "type": "quantitative",
+          "title": "Points per game",
+          "scale": {
+            "range": ["#fff3b0", "#ffe680", "#ffd200", "#f2b705", "#b98900", "#7a5c00", "#111111"],
+            "domain": [50, 130],
+            "clamp": true
+          },
+          "legend": {"orient": "top", "gradientLength": 200, "direction": "horizontal", "offset": 16}
+        },
+        "tooltip": [
+          {"field": "team", "title": "Club"},
+          {"field": "year", "title": "Season"},
+          {"field": "ppg", "title": "Points per game", "format": ".1f"},
+          {"field": "games", "title": "Games"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "(datum.team == 'Geelong' && datum.year == 1992) || (datum.team == 'Greater Western Sydney' && datum.year == 2012)"
+        }
+      ],
+      "mark": {"type": "rect", "filled": false, "stroke": "#a87900", "strokeWidth": 2.5}
+    },
+    {
+      "transform": [{"filter": "datum.team == 'Greater Western Sydney' && datum.year == 2012"}],
+      "mark": {
+        "type": "text",
+        "text": "Lowest since 1990: Greater Western Sydney, 2012 (58 a game)",
+        "align": "right",
+        "dx": -18,
+        "color": "#0b0b0b",
+        "fontWeight": 600,
+        "fontSize": 12
+      }
+    },
+    {
+      "transform": [{"filter": "datum.team == 'Geelong' && datum.year == 1992"}],
+      "mark": {
+        "type": "text",
+        "text": "Highest since 1990: Geelong, 1992 (137 a game)",
+        "align": "left",
+        "dy": -9,
+        "dx": -12,
+        "color": "#0b0b0b",
+        "fontWeight": 600,
+        "fontSize": 12
+      },
+      "encoding": {"y": {"value": 0}}
+    },
+    {
+      "transform": [{"filter": "datum.team == 'Adelaide' && datum.year == 2020"}],
+      "mark": {
+        "type": "text",
+        "text": "2020: shorter quarters",
+        "dy": -9,
+        "color": "#0b0b0b",
+        "fontWeight": 600,
+        "fontSize": 12
+      },
+      "encoding": {"y": {"value": 0}}
+    }
+  ]
+}

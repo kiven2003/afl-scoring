@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Ridgeline plot of winning margins for each decade, coloured by the median margin.",
+  "data": {"url": "data/margin_density.csv"},
+  "transform": [{"filter": "datum.decade >= '1950s'"}],
+  "bounds": "flush",
+  "spacing": 0,
+  "facet": {
+    "row": {
+      "field": "decade",
+      "type": "nominal",
+      "title": null,
+      "header": {
+        "labelAngle": 0,
+        "labelAlign": "left",
+        "labelFontSize": 12,
+        "labelColor": "#52514e",
+        "labelPadding": 0
+      }
+    }
+  },
+  "spec": {
+    "width": 430,
+    "height": 26,
+    "encoding": {
+      "x": {
+        "field": "margin",
+        "type": "quantitative",
+        "title": "Winning margin (points)",
+        "scale": {"domain": [0, 150]},
+        "axis": {"grid": false, "values": [0, 25, 50, 75, 100, 125, 150]}
+      }
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "area",
+          "interpolate": "monotone",
+          "stroke": "white",
+          "strokeWidth": 1.5,
+          "clip": false
+        },
+        "encoding": {
+          "y": {
+            "field": "density",
+            "type": "quantitative",
+            "stack": null,
+            "axis": null,
+            "scale": {"range": [26, -40], "domain": [0, 0.035]}
+          },
+          "fill": {
+            "field": "median",
+            "type": "quantitative",
+            "title": "Median margin (points)",
+            "scale": {"range": ["#ffe680", "#111111"], "domain": [20, 34]},
+            "legend": {"orient": "top", "gradientLength": 180, "direction": "horizontal"}
+          },
+          "tooltip": [{"field": "decade", "title": "Decade"}, {"field": "median", "title": "Median margin"}]
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "(datum.decade == '1910s' || datum.decade == '1980s' || datum.decade == '2020s') && datum.margin == 87"
+          },
+          {
+            "calculate": "datum.decade + ': half of games within ' + format(datum.median, 'd') + ' points'",
+            "as": "label"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dy": 4,
+          "color": "#0b0b0b",
+          "fontSize": 11,
+          "fontWeight": 500
+        },
+        "encoding": {"y": {"value": 16}, "text": {"field": "label"}}
+      }
+    ]
+  }
+}

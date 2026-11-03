@@ -1,0 +1,92 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Goals as a share of all scoring shots for every season.",
+  "width": "container",
+  "height": 360,
+  "data": {"url": "data/seasons.csv"},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": null,
+      "scale": {"domain": [1897, 2026]},
+      "axis": {"format": "d", "grid": false, "tickCount": 14}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "color": "#111111", "strokeWidth": 2},
+      "encoding": {
+        "y": {
+          "field": "accuracy",
+          "type": "quantitative",
+          "title": "Goals as % of all scoring shots",
+          "scale": {"domain": [35, 60]},
+          "axis": {"tickCount": 5}
+        }
+      }
+    },
+    {
+    "data": {"values": [{"level": 50}]},
+    "mark": {"type": "rule", "color": "#c3c2b7", "strokeWidth": 1.5},
+    "encoding": {"x": {"value": 0}, "x2": {"value": {"expr": "width"}}, "y": {"field": "level", "type": "quantitative"}}
+    },
+    {
+      "data": {"values": [{"year": 1950, "v": 51.5, "t": "Half of all scoring shots"}]},
+      "mark": {"type": "text", "color": "#0b0b0b", "fontWeight": 600, "fontSize": 12},
+      "encoding": {"y": {"field": "v", "type": "quantitative"}, "text": {"field": "t"}}
+    },
+    {
+      "params": [
+        {
+          "name": "hov",
+          "select": {
+            "type": "point",
+            "encodings": ["x"],
+            "on": "mouseover",
+            "nearest": true,
+            "clear": "mouseout"
+          }
+        }
+      ],
+      "mark": {"type": "point", "opacity": 0, "size": 400},
+      "encoding": {
+        "y": {
+          "field": "accuracy",
+          "type": "quantitative",
+          "title": "Goals as % of all scoring shots",
+          "scale": {"domain": [35, 60]},
+          "axis": {"tickCount": 5}
+        },
+        "tooltip": [
+          {"field": "year", "title": "Season", "format": "d"},
+          {"field": "accuracy", "title": "Accuracy %", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": {"param": "hov", "empty": false}}],
+      "mark": {"type": "rule", "color": "#c3c2b7"}
+    },
+    {
+      "transform": [{"filter": {"param": "hov", "empty": false}}],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "color": "#111111",
+        "stroke": "white",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "accuracy",
+          "type": "quantitative",
+          "title": "Goals as % of all scoring shots",
+          "scale": {"domain": [35, 60]},
+          "axis": {"tickCount": 5}
+        }
+      }
+    }
+  ]
+}

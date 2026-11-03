@@ -1,0 +1,109 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Each club's scoring rank per season since 2010. Click a point or use the menu to highlight a club.",
+  "width": "container",
+  "height": 420,
+  "data": {"url": "data/team_rank.csv"},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {"labelAngle": 0, "grid": false, "domain": false}
+    },
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "title": "Scoring rank (1 = highest)",
+      "scale": {"domain": [18, 1], "nice": false},
+      "axis": {"values": [1, 6, 12, 18], "grid": false}
+    },
+    "detail": {"field": "team"}
+  },
+  "layer": [
+    {"mark": {"type": "line", "color": "#e1e0d9", "strokeWidth": 1.5, "interpolate": "monotone"}},
+    {
+      "params": [
+        {
+          "name": "pick",
+          "value": [{"team": "Richmond"}],
+          "select": {
+            "type": "point",
+            "fields": ["team"],
+            "on": "click[event.item && event.item.datum && event.item.datum.team]",
+            "toggle": false
+          },
+          "bind": {
+            "input": "select",
+            "options": [
+              "Adelaide",
+              "Brisbane Lions",
+              "Carlton",
+              "Collingwood",
+              "Essendon",
+              "Fremantle",
+              "Geelong",
+              "Gold Coast",
+              "Greater Western Sydney",
+              "Hawthorn",
+              "Melbourne",
+              "North Melbourne",
+              "Port Adelaide",
+              "Richmond",
+              "St Kilda",
+              "Sydney",
+              "West Coast",
+              "Western Bulldogs"
+            ],
+            "name": "Highlight a club: "
+          }
+        }
+      ],
+      "mark": {"type": "point", "size": 180, "opacity": 0, "filled": true},
+      "encoding": {
+        "tooltip": [
+          {"field": "team", "title": "Club"},
+          {"field": "year", "title": "Season"},
+          {"field": "rank", "title": "Scoring rank"},
+          {"field": "ppg", "title": "Points per game", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": {"param": "pick", "empty": false}}],
+      "mark": {"type": "line", "color": "#f2b705", "strokeWidth": 4, "interpolate": "monotone"}
+    },
+    {
+      "transform": [{"filter": {"param": "pick", "empty": false}}],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "color": "#f2b705",
+        "stroke": "#111111",
+        "strokeWidth": 2,
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {"field": "team", "title": "Club"},
+          {"field": "year", "title": "Season"},
+          {"field": "rank", "title": "Scoring rank"},
+          {"field": "ppg", "title": "Points per game", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": {"param": "pick", "empty": false}}, {"filter": "datum.year == 2026"}],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dy": -14,
+        "color": "#0b0b0b",
+        "fontWeight": 600,
+        "fontSize": 12
+      },
+      "encoding": {"text": {"field": "team"}}
+    }
+  ]
+}

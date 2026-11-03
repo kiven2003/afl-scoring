@@ -1,0 +1,50 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Share of games won by less than a goal in each decade.",
+  "width": "container",
+  "height": 360,
+  "data": {"url": "data/close_games.csv"},
+  "transform": [{"filter": "datum.decade >= '1950s'"}],
+  "encoding": {
+    "x": {
+      "field": "decade",
+      "type": "nominal",
+      "title": null,
+      "axis": {"labelAngle": 0, "grid": false, "labelFontSize": 11, "labelOverlap": false}
+    },
+    "y": {
+      "field": "share",
+      "type": "quantitative",
+      "title": "Share of games won by under a goal (%)",
+      "scale": {"domain": [0, 20]},
+      "axis": {"tickCount": 5}
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#111111",
+        "cornerRadiusTopLeft": 4,
+        "cornerRadiusTopRight": 4,
+        "width": {"band": 0.7}
+      },
+      "encoding": {
+        "tooltip": [
+          {"field": "decade", "title": "Decade"},
+          {"field": "share", "title": "Share %", "format": ".1f"},
+          {"field": "close", "title": "Games under 6 points"},
+          {"field": "games", "title": "Total games"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.decade == '1980s' || datum.decade == '2020s'"},
+        {"calculate": "format(datum.share, '.1f') + '%'", "as": "label"}
+      ],
+      "mark": {"type": "text", "dy": -9, "color": "#0b0b0b", "fontWeight": 600, "fontSize": 12},
+      "encoding": {"text": {"field": "label"}}
+    }
+  ]
+}

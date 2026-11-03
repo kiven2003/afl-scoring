@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Proportional symbol map of venues: size shows games hosted and colour shows average total score.",
+  "width": 520,
+  "height": 470,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [-18, -36],
+    "rotate": [-134, 0],
+    "center": [0, -27.5],
+    "scale": 745,
+    "translate": [262, 235]
+  },
+  "layer": [
+    {
+      "data": {"url": "data/aus_states.topojson", "format": {"type": "topojson", "feature": "states"}},
+      "mark": {"type": "geoshape", "fill": "#f0efec", "stroke": "white", "strokeWidth": 1.5}
+    },
+    {
+      "data": {"url": "data/venues.csv"},
+      "encoding": {
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "longitude": {"field": "lon", "type": "quantitative"}
+      },
+      "layer": [
+        {
+          "mark": {"type": "circle", "stroke": "white", "strokeWidth": 1.5, "opacity": 0.92},
+          "encoding": {
+            "size": {
+              "field": "games",
+              "type": "quantitative",
+              "title": "Games hosted",
+              "scale": {"type": "sqrt", "range": [0, 1000], "domainMin": 0},
+              "legend": {
+                "orient": "top-left",
+                "values": [25, 100, 250],
+                "symbolFillColor": "#ffd200",
+                "symbolStrokeColor": "white"
+              }
+            },
+            "color": {
+              "field": "avg_total",
+              "type": "quantitative",
+              "title": "Average total score",
+              "scale": {"range": ["#ffe680", "#111111"]},
+              "legend": {"orient": "bottom-left", "gradientLength": 130, "direction": "horizontal"}
+            },
+            "order": {"field": "games", "sort": "descending"},
+            "tooltip": [
+              {"field": "venue", "title": "Venue"},
+              {"field": "city", "title": "City"},
+              {"field": "games", "title": "Games"},
+              {"field": "avg_total", "title": "Average total score", "format": ".1f"}
+            ]
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": {
+                "field": "venue",
+                "oneOf": [
+                  "Perth Stadium",
+                  "Adelaide Oval",
+                  "Gabba",
+                  "S.C.G.",
+                  "Marrara Oval",
+                  "M.C.G.",
+                  "York Park",
+                  "Bellerive Oval"
+                ]
+              }
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 12,
+            "dy": -9,
+            "color": "#0b0b0b",
+            "fontSize": 11,
+            "fontWeight": 500
+          },
+          "encoding": {"text": {"field": "venue"}}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dumbbell chart of average score in the season before and after each rule change.",
+  "width": "container",
+  "height": 260,
+  "data": {"url": "data/rules.csv"},
+  "encoding": {
+    "y": {
+      "field": "rule",
+      "type": "nominal",
+      "title": null,
+      "sort": {"field": "year"},
+      "axis": {"grid": false, "domain": false, "ticks": false, "labelLimit": 220}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "rule", "color": "#c3c2b7", "strokeWidth": 2},
+      "encoding": {
+        "x": {
+          "field": "before",
+          "type": "quantitative",
+          "title": "Average points per game",
+          "scale": {"domain": [150, 190]},
+          "axis": {"tickCount": 5}
+        },
+        "x2": {"field": "after"}
+      }
+    },
+    {
+      "transform": [{"fold": ["before", "after"], "as": ["when", "value"]}],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 150,
+        "stroke": "white",
+        "strokeWidth": 2,
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {"field": "value", "type": "quantitative"},
+        "color": {
+          "field": "when",
+          "type": "nominal",
+          "title": null,
+          "scale": {"domain": ["before", "after"], "range": ["#898781", "#111111"]},
+          "legend": {
+            "orient": "top",
+            "labelExpr": "datum.label == 'before' ? 'Season before' : 'Season after'"
+          }
+        },
+        "tooltip": [
+          {"field": "rule", "title": "Change"},
+          {"field": "before_year", "title": "Season before"},
+          {"field": "before", "title": "Points before", "format": ".1f"},
+          {"field": "after_year", "title": "Season after"},
+          {"field": "after", "title": "Points after", "format": ".1f"},
+          {"field": "change", "title": "Change", "format": "+.1f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"calculate": "max(datum.before, datum.after)", "as": "right"},
+        {"calculate": "format(datum.change, '+.1f')", "as": "label"}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "color": "#0b0b0b",
+        "fontWeight": 600,
+        "fontSize": 12
+      },
+      "encoding": {"x": {"field": "right", "type": "quantitative"}, "text": {"field": "label"}}
+    }
+  ]
+}

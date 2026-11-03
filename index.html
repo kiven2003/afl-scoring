@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Where did all the goals go?</title>
+       <link rel="stylesheet" href="css/style.css?v=2">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.33.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.23.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.29.0"></script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <h1>Where did all the goals go?</h1>
+            <p class="sub">Are we finally progressing? We are seeing a recent climb in average goals scored per game. Games are getting closer in this era</p>
+            <dl class="stats">
+                <div>
+                    <dt>Highest-scoring season</dt>
+                    <dd>224 <small>points a game, 1982</small></dd>
+                </div>
+                <div class="warn">
+                    <dt>Lowest full-length season since</dt>
+                    <dd>160 <small>points a game, 2021</small></dd>
+                </div>
+                <div>
+                    <dt>Latest season</dt>
+                    <dd>179 <small>points a game, 2026</small></dd>
+                </div>
+            </dl>
+        </div>
+    </header>
+    <main class="wrap">
+        <section class="howto">
+            <h2>How to read this page</h2>
+            <dl>
+                <div><dt>Goal</dt><dd>Worth 6 points.</dd></div>
+                <div><dt>Behind</dt><dd>A near miss, worth 1 point.</dd></div>
+                <div><dt>Scoring shot</dt><dd>A shot that scores a goal or a behind.</dd></div>
+                <div><dt>Goal accuracy</dt><dd>Goals as a share of all scoring shots.</dd></div>
+                <div><dt>Median margin</dt><dd>Half of games were won by more than this, and half by less.</dd></div>
+                <div><dt>The 2020 season</dt><dd>Quarters were shortened because of COVID-19, so 2020 is shown separately or left out when comparing scoring and margins.</dd></div>
+            </dl>
+        </section>
+        <section>
+            <div class="intro">
+                <p class="kicker">Section 1: The rise and fall</p>
+                <h2>Goal scoring peaked in 1982, where are we now?</h2>
+                <p>The overall scoring peaked in 1982 before a bumpy decline through 2021, the lowest scoring full-length season since the peak, averaging only 160 points per game. 
+                    It has slowly risen since then. Then in 2026, the scoring soared to 179 points per game, its highest since 2013.</p>
+            </div>
+            <figure>
+                <h3>Average points per game, every season since 1897</h3>
+                <div class="chart" id="c1"></div>
+                <figcaption>Hover over any season to see the average score per game and total games for each year. 
+                    The gold circle is for the year 2020, it's left off the line that year as the quarters were cut from 20 to 16 minutes due to COVID-19. 
+                    Therefore, it can't be compared directly with other seasons. The gold lines mark well-known defensive tactics which will be further explained in Section 2.</figcaption>
+            </figure>
+            <figure>
+                <h3>Nearly every club had its downfall</h3>
+                <div class="chart" id="c2"></div>
+                <figcaption>Each row on the heatmap shows one of today's 18 clubs in the league and each column is a season. Darker means more points per game, and the gold outline marks the two most extreme club seasons, leaving out the 2020 season. 
+                    Blank cells are seasons before a club joined. Footscray, South Melbourne, the Kangaroos and the Brisbane Bears appear under their current club names.
+                </figcaption>
+            </figure>
+            <p class="takeaway">Of the 16 clubs playing in both decades of 1990s and 2020s, 15 now score less per game, and only Brisbane managed to score more. 
+                    The biggest drop is North Melbourne from an average of (110 to 72) across the seasons. It is then followed by West Coast (96 to 68) and Essendon (103 to 77). </p>
+        </section>
+        <section>
+            <div class="intro">
+                <p class="kicker">Section 2: Are teams kicking straighter?</p>
+                <h2>Fewer shots taken, but not because of kicking</h2>
+                <p>A goal is worth six points and a behind, which is a near miss, is worth one point. 
+                    If goals decreased due to poor kicking, behinds would have risen showing that the kicks were near misses. 
+                    However, they both fell together as a typical game went from 62 scoring shots in 1982 to 44 in 2021.</p>
+            </div>
+            <div class="row">
+                <figure>
+                    <h3>Goals and behinds per game, joined in season order</h3>
+                    <div class="chart" id="c3"></div>
+                    <figcaption>Each point in the diagram is a season, and the darker the points, the more recent the season. 
+                        Follow the line to read time:
+                        up and to the right means more of both, down and to the left means fewer of both. 2020 is shown separately due to COVID-19 as mentioned above.</figcaption>
+                </figure>
+                <figure>
+                    <h3>Goal accuracy of all scoring shots</h3>
+                    <div class="chart" id="c4"></div>
+                    <figcaption> The horizontal line sits at 50% which shows which seasons have more scoring shots that are goals rather than behinds.
+                        The accuracy % is goals as a share of goals plus behinds.
+                        The vertical axis runs from 35% to 60% as it does not start from 0%.
+                    </figcaption>
+                </figure>
+            </div>
+            <p class="takeaway">Accuracy rose for most of the 20th century, then levelled off. 
+                Between 1982 and 2021, it barely moved, going from 51.9% to 52.4%, while scoring shots fell by 18 a game. 
+                Scoring dropped because teams got fewer shots, not because they kicked worse.</p>
+            <div class="intro">
+            <h2>Could the way clubs play be why?</h2>
+            <p>To take a shot, players need space, and coaches have spent years finding ways to take that space away. 
+                One way is the <strong>flood</strong>, where a team pulls its forwards back to crowd the area the other team is attacking. 
+                The Western Bulldogs used a "Super-Flood" to beat an undefeated Essendon in 2000. Hawthorn's <strong>rolling zone</strong>, where players defend areas of the ground together, was a big part of its 2008 premiership. 
+                Collingwood then won in 2010 using a <strong>forward press</strong>, which traps the ball in its attacking half.</p>
+            <p>A University of South Australia study of the 1999 to 2019 seasons found that player density, tackles and stoppages went up while scoring went down. 
+                Teams were still getting the ball inside 50 about as often, which suggests defences had become harder to break through. Match results can't measure tactics directly, so this doesn't prove playing style is the reason, but the pattern does fit.</p>
+            </div>
+        </section>
+        <section>
+            <div class="intro">
+                <p class="kicker">Section 3: Are games getting closer?</p>
+                <h2>Winning margins shrank since the 1980s</h2>
+                <p>As teams score less, it's harder for any team to win a game by a large margin. 
+                    The high-scoring era was the 1980s and 1990s, where half of all games were decided by more than 32 points.
+                    In the 2020s, that figure has fallen to 26, and the share of games won by less than a goal has climbed from 9% in the 1980s to 14%.</p>
+            </div>
+            <div class="row">
+                <figure>
+                    <h3>Winning margins by decade</h3>
+                    <div class="chart" id="c5"></div>
+                    <figcaption>Each shape shows how common each winning margin was in that decade: the taller the
+                        shape, the more games finished at that margin. Darker shapes have larger typical margins.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <h3>Games won by less than a goal</h3>
+                    <div class="chart" id="c6"></div>
+                    <figcaption>Each bar shows the percentage of that decade's games won by less than a goal.
+                        The 2020s bar is incomplete and the 2020 season is also left out.
+                    </figcaption>
+                </figure>
+            </div>
+            <p class="takeaway">Close game finishes are more common than ever. 
+                So far, 14.2% of games in the 2020s have been won by under a goal, the highest of any decade since 1900 and up from 9.0% in the 1980s and 9.5% in the 1990s 
+                Now half of the games are decided by 26 points or fewer as compared to 32 in the 1980s and 1990s.
+            </p>
+        </section>
+        <section>
+            <div class="intro">
+                <p class="kicker">Section 4: Teams</p>
+                <h2>Seven clubs have topped the scoring since 2010</h2>
+                <p>Scoring fell across the league, but some clubs still stood well above or below the rest, and the top spot keeps changing hands. 
+                    Hawthorn led for four straight years from 2012 to 2015, and Sydney finished on top in 2026 with 110 points a game. 
+                    The chart opens on Richmond, which ranked 2nd in 2018, 2019 and 2022, then last in each of the past three seasons. </p>
+            </div>
+            <figure>
+                <h3>Each club's scoring rank since 2010</h3>
+                <div class="chart" id="c7"></div>
+                <figcaption>Click any point or use the menu to highlight a club. Rank 1 is the highest points per game
+                    that season. Gold Coast entered in 2011 and Greater Western Sydney in 2012.</figcaption>
+            </figure>
+            <p class="takeaway">Compared with the league average in the same season, the highest-scoring teams since 1990 were Geelong in 1992 (33 points a game above average), Hawthorn in 2012 and Essendon in 2000 (both 28 above). 
+                The lowest were Greater Western Sydney in its first season, 2012 (34 below), Melbourne in 2013 and 2014 (26 below), and Richmond in 2026 (25 below).</p>
+        </section>
+        <section>
+            <div class="intro">
+                <p class="kicker">Section 5: Where the footy is played</p>
+                <h2>Half the games, a quarter of the people</h2>
+                <p>Victoria hosted 49% of the 2026 season's games with about 26% of Australia's population. The rest of
+                    the schedule sends clubs across the country: they made 184 trips between cities in 2026, and
+                    Adelaide–Melbourne was the busiest route. Scores vary by ground too: Perth Stadium has averaged the
+                    lowest score of the major venues since 2022.</p>
+            </div>
+            <div class="row">
+                <figure>
+                    <h3>Venues: games hosted and average score, 2022–2026</h3>
+                    <div class="chart mapc" id="c8"></div>
+                    <figcaption>Circle size shows games hosted and colour shows the average total score. Venues with
+                        fewer than five games are left out. The M.C.G. and Docklands are about 3 km apart, so their
+                        circles overlap; hover for exact figures.</figcaption>
+                </figure>
+                <figure>
+                    <h3>Team trips between cities, by season</h3>
+                    <div class="chart mapc" id="c9"></div>
+                    <figcaption>Line thickness shows how many times clubs travelled between two cities, counted whenever
+                        a club played away from its home city. Move the slider to 2020 to see the hub season. Games
+                        overseas are left out.</figcaption>
+                </figure>
+            </div>
+            <div class="row">
+                <figure>
+                    <h3>Games hosted per 100,000 residents, 2026</h3>
+                    <div class="chart mapc" id="c10"></div>
+                    <figcaption>A rate shows how much football each state sees for its size. South Australia ranks
+                        first, helped by Gather Round, when the whole league plays one round there. New South Wales sees
+                        the least. Population: ABS, 31 March 2026.</figcaption>
+                </figure>
+                <figure>
+                    <h3>Where the 2026 games were played</h3>
+                    <div class="chart mapc" id="c11"></div>
+                    <figcaption>Each square is 1% of the season's 218 games, including finals. Victoria alone fills
+                        almost half the grid.</figcaption>
+                </figure>
+            </div>
+            <p class="takeaway">AFL is still centred on Victoria, but it isn't only about population. 
+                South Australia hosted the most games for its size in 2026, at 1.67 per 100,000 residents, just ahead of Victoria at 1.50. 
+                New South Wales and Queensland, the first and third most populous states, hosted the fewest for their size, at 0.24 and 0.37. 
+                That means clubs have to travel: they made 184 trips between cities in 2026.</p>
+        </section>
+        <section>
+            <div class="intro">
+                <p class="kicker">Section 6: Did the rule changes work?</p>
+                <h2>Four rule changes, little lift. Then came 2026</h2>
+                <p>The AFL keeps changing the rules. 
+                    Scoring fell after the first interchange cap in 2014, rose a little when the cap was cut in 2016, fell again after the 6-6-6 starting positions in 2019, and barely moved after the stand rule in 2021. 
+                    In 2026, the league brought in the last-disposal rule and a new centre ball-up, and enforced the stand rule more strictly. 
+                    That season, the average rose by about 10 points, the biggest rise of the five.</p>
+            </div>
+            <figure>
+                <h3>Average score in the season before and after each change</h3>
+                <div class="chart" id="c12"></div>
+                <figcaption>Each pair of points shows the average score in the season before and after a rule change. 
+                    The 2021 comparison uses 2019 as the season before, skipping 2020. 
+                    The horizontal axis starts at 150 because points are read by their position, not their length.</figcaption>
+            </figure>
+            <p class="takeaway">Scoring changed by anywhere from 11 points down to 10 points up in the season after a rule change, so a new rule doesn't guarantee more goals. 
+                Three of the five changes were followed by lower scoring, and only 2016 and 2026 were followed by a rise. 
+                These comparisons can't prove the rules caused those changes, because other things change between seasons too.</p>
+            <div class="intro close">
+                <h2>So where did the goals go?</h2>
+                <p>They went with the shots. Between 1982 and 2021 a typical game lost 18 scoring shots while kicking
+                    accuracy held steady, and margins narrowed along the way. The evidence points to playing style: more
+                    crowded, more defensive football that makes clean attacking chances harder to create. The 2026
+                    season won back about five of those shots a game, but it still finished 46 points short of 1982. One
+                    strong season doesn't make a trend, so the next few will show whether the goals are really coming
+                    back.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <h2>About this page</h2>
+            <div class="row">
+                <div>
+                    <p><strong>Data Sources</strong></p>
+                        <ul class="sources">
+                            <li>Match results: <a href="https://afltables.com/afl/stats/biglists/bg3.txt">AFL Tables, all games in chronological order</a>, 1897–2026 (17,056 games)</li>
+                            <li>Population: <a href="https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release">Australian Bureau of Statistics, National, state and territory population</a>, March 2026</li>
+                            <li>State boundaries: <a href="https://github.com/rowanhogan/australian-states">australian-states GeoJSON by Rowan Hogan</a>, simplified</li>
+                            <li>Venue coordinates: Wikipedia, with each page listed in <a href="data/venue_sources.csv">venue_sources.csv</a></li>
+                            <li>Full details: <a href="data/README.md">data README</a></li>
+                        </ul>
+                    <p><strong>Rule changes</strong></p>
+                        <ul class="sources">
+                            <li><a href="https://www.afl.com.au/news/78117/afl-commission-decision-on-interchange-cap-subsitute-player-for-2016-toyota-afl-premiership-season">AFL: interchange caps</a></li>
+                            <li><a href="https://www.afl.com.au/news/140698/new-rules-revealed-nine-changes-for-2019">AFL: 2019 rules</a></li>
+                            <li><a href="https://www.afl.com.au/news/524804/rule-changes-afl-slashes-rotations-man-on-mark-cant-move">AFL: 2021 rules</a></li>
+                            <li><a href="https://www.afl.com.au/news/1475448">AFL: 2026 rules</a></li>
+                        </ul>
+                        <p><strong>Playing style</strong></p>
+                        <ul class="sources">
+                            <li><a href="https://www.afl.com.au/news/56279/pressing-issue">AFL, "Pressing issue"</a>: flood, rolling zone and press</li>
+                            <li><a href="https://unisa.edu.au/unisanews/2020/august/story4">University of South Australia</a>, reporting Lane, van der Ploeg and Norton, "Characterisation of offensive and defensive game play trends in the Australian Football League (1999–2019)", <em>International Journal of Performance Analysis in Sport</em></li>
+                        </ul>
+                </div>
+                <div>
+                    <p><strong>Maps.</strong> Albers equal-area conic projection with standard parallels at 18°S and
+                        36°S, so that areas stay comparable across Australia.</p>
+                    <p><strong>Use of AI.</strong> Claude (Anthropic), a generative AI tool, was used to help with the narrative structures and visualisation idioms.
+                    Claude helped me write and revised some of my websites CSS, JavaScript along with Vega/Vega-Lite specifications.</p>
+                    <p><strong>Author.</strong> Kiven Teoh, FIT3179 Data Visualisation, Monash University, November 2026.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+    fetch('js/theme.json').then(r => r.json()).then(config => {
+        const opts = { actions: false, renderer: 'svg', config };
+
+        vegaEmbed('#c1', 'js/01_line_scoring_trend.vg.json', opts);
+        vegaEmbed('#c2', 'js/02_heatmap_club_scoring.vg.json', opts);
+        vegaEmbed('#c3', 'js/03_connected_goals_behinds.vg.json', opts);
+        vegaEmbed('#c4', 'js/04_line_accuracy.vg.json', opts);
+        vegaEmbed('#c5', 'js/05_ridgeline_margins.vg.json', opts);
+        vegaEmbed('#c6', 'js/06_bar_close_games.vg.json', opts);
+        vegaEmbed('#c7', 'js/07_bump_scoring_rank.vg.json', opts);
+        vegaEmbed('#c8', 'js/08_symbol_map_venues.vg.json', opts);
+        vegaEmbed('#c9', 'js/09_flow_map_trips.vg.json', opts);
+        vegaEmbed('#c10', 'js/10_choropleth_states.vg.json', opts);
+        vegaEmbed('#c11', 'js/11_waffle_states.vg.json', opts);
+        vegaEmbed('#c12', 'js/12_dumbbell_rules.vg.json', opts);
+    });
+</script>
+</body>
+
+</html>

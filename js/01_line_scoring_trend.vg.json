@@ -1,0 +1,155 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Average points per game for every season, annotated with rule changes and defensive tactics.",
+  "width": "container",
+  "height": 340,
+  "data": {"url": "data/seasons.csv"},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": null,
+      "scale": {"domain": [1897, 2026]},
+      "axis": {"format": "d", "grid": false, "tickCount": 14}
+    }
+  },
+  "layer": [
+    {
+      "data": {"values": [{"year": 2019}, {"year": 2021}]},
+      "mark": {"type": "rule", "color": "#c3c2b7"}
+    },
+    {
+      "data": {
+        "values": [{"year": 2000, "top": 207}, {"year": 2008, "top": 182}, {"year": 2010, "top": 181}]
+      },
+      "mark": {"type": "rule", "color": "#a87900", "opacity": 0.6},
+      "encoding": {"y": {"field": "top", "type": "quantitative"}, "y2": {"datum": 0}}
+    },
+    {
+      "transform": [{"filter": "datum.short == 0"}],
+      "mark": {"type": "line", "color": "#111111", "strokeWidth": 2},
+      "encoding": {
+        "y": {
+          "field": "avg_total",
+          "type": "quantitative",
+          "title": "Average points per game (both teams)",
+          "scale": {"domain": [0, 250]},
+          "axis": {"tickCount": 6}
+        }
+      }
+    },
+    {
+      "transform": [{"filter": "datum.short == 1"}],
+      "mark": {"type": "point", "size": 70, "color": "#a87900", "strokeWidth": 2},
+      "encoding": {
+        "y": {
+          "field": "avg_total",
+          "type": "quantitative",
+          "title": "Average points per game (both teams)",
+          "scale": {"domain": [0, 250]},
+          "axis": {"tickCount": 6}
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"year": 2019, "v": 246, "t": "6-6-6 rule, 2019"},
+          {"year": 2019, "v": 232, "t": "Stand rule, 2021"}
+        ]
+      },
+      "mark": {"type": "text", "align": "right", "dx": -5, "fontSize": 12, "color": "#52514e"},
+      "encoding": {"y": {"field": "v", "type": "quantitative"}, "text": {"field": "t"}}
+    },
+    {
+      "data": {
+        "values": [
+          {"year": 2000, "v": 78, "t": "2000: \"Super-Flood\""},
+          {"year": 2008, "v": 52, "t": "2008: rolling zone"},
+          {"year": 2010, "v": 26, "t": "2010: forward press"},
+          {"year": 1968, "v": 203, "t": "1969: biggest one-season jump, +30"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -5,
+        "fontSize": 12,
+        "color": "#0b0b0b",
+        "fontWeight": 500
+      },
+      "encoding": {"y": {"field": "v", "type": "quantitative"}, "text": {"field": "t"}}
+    },
+    {
+      "data": {
+        "values": [
+          {"year": 1982, "v": 227, "t": "1982 peak: 224 points"},
+          {"year": 2019.4, "v": 121.2, "t": "2020: shorter quarters"},
+          {"year": 2026, "v": 200, "t": "2026 rebound: 179 points"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -5,
+        "fontSize": 12,
+        "color": "#0b0b0b",
+        "fontWeight": 600
+      },
+      "encoding": {"y": {"field": "v", "type": "quantitative"}, "text": {"field": "t"}}
+    },
+    {
+      "params": [
+        {
+          "name": "hov",
+          "select": {
+            "type": "point",
+            "encodings": ["x"],
+            "on": "mouseover",
+            "nearest": true,
+            "clear": "mouseout"
+          }
+        }
+      ],
+      "mark": {"type": "point", "opacity": 0, "size": 400},
+      "encoding": {
+        "y": {
+          "field": "avg_total",
+          "type": "quantitative",
+          "title": "Average points per game (both teams)",
+          "scale": {"domain": [0, 250]},
+          "axis": {"tickCount": 6}
+        },
+        "tooltip": [
+          {"field": "year", "title": "Season", "format": "d"},
+          {"field": "avg_total", "title": "Points per game", "format": ".1f"},
+          {"field": "games", "title": "Games"}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": {"param": "hov", "empty": false}}],
+      "mark": {"type": "rule", "color": "#c3c2b7"}
+    },
+    {
+      "transform": [{"filter": {"param": "hov", "empty": false}}],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "color": "#111111",
+        "stroke": "white",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "avg_total",
+          "type": "quantitative",
+          "title": "Average points per game (both teams)",
+          "scale": {"domain": [0, 250]},
+          "axis": {"tickCount": 6}
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "font": "system-ui, sans-serif",
+  "background": "transparent",
+  "view": {"stroke": null},
+  "axis": {
+    "gridColor": "#e1e0d9",
+    "domainColor": "#c3c2b7",
+    "tickColor": "#c3c2b7",
+    "labelColor": "#52514e",
+    "titleColor": "#52514e",
+    "labelFontSize": 12,
+    "titleFontSize": 12,
+    "titleFontWeight": 500
+  },
+  "legend": {
+    "labelColor": "#52514e",
+    "titleColor": "#52514e",
+    "labelFontSize": 12,
+    "titleFontSize": 12,
+    "titleFontWeight": 500
+  }
+}

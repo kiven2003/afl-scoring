@@ -1,0 +1,304 @@
+team,year,rank,ppg
+Geelong,2010,1,112.4
+Collingwood,2010,2,106.5
+Carlton,2010,3,97.3
+Fremantle,2010,4,97.0
+Western Bulldogs,2010,5,95.1
+Hawthorn,2010,6,91.7
+Sydney,2010,7,91.2
+North Melbourne,2010,8,87.7
+Essendon,2010,9,87.7
+St Kilda,2010,10,85.6
+Melbourne,2010,11,84.7
+Brisbane Lions,2010,12,80.7
+West Coast,2010,13,80.6
+Adelaide,2010,14,80.1
+Port Adelaide,2010,15,79.5
+Richmond,2010,16,77.9
+Geelong,2011,1,115.3
+Collingwood,2011,2,112.9
+Hawthorn,2011,3,104.4
+Carlton,2011,4,103.0
+Essendon,2011,5,100.2
+West Coast,2011,6,98.7
+North Melbourne,2011,7,95.7
+Richmond,2011,8,94.0
+Western Bulldogs,2011,9,93.6
+Melbourne,2011,10,89.7
+Sydney,2011,11,86.0
+St Kilda,2011,12,84.7
+Brisbane Lions,2011,13,82.5
+Fremantle,2011,14,81.4
+Adelaide,2011,15,79.2
+Port Adelaide,2011,16,78.1
+Gold Coast,2011,17,69.7
+Hawthorn,2012,1,119.7
+St Kilda,2012,2,106.7
+Adelaide,2012,3,105.7
+North Melbourne,2012,4,105.4
+West Coast,2012,5,102.8
+Sydney,2012,6,101.9
+Geelong,2012,7,99.5
+Richmond,2012,8,98.6
+Essendon,2012,9,95.0
+Collingwood,2012,10,94.5
+Carlton,2012,11,94.5
+Fremantle,2012,12,88.5
+Brisbane Lions,2012,13,86.5
+Port Adelaide,2012,14,76.9
+Melbourne,2012,15,71.8
+Western Bulldogs,2012,16,70.1
+Gold Coast,2012,17,68.6
+Greater Western Sydney,2012,18,57.7
+Hawthorn,2013,1,112.3
+Geelong,2013,2,107.0
+North Melbourne,2013,3,104.9
+Sydney,2013,4,98.2
+Richmond,2013,5,97.8
+Essendon,2013,6,97.5
+Collingwood,2013,7,96.1
+Carlton,2013,8,96.0
+Adelaide,2013,9,93.8
+West Coast,2013,10,92.6
+Port Adelaide,2013,11,92.4
+Fremantle,2013,12,91.3
+Western Bulldogs,2013,13,87.5
+Brisbane Lions,2013,14,87.4
+Gold Coast,2013,15,87.2
+St Kilda,2013,16,79.6
+Greater Western Sydney,2013,17,69.3
+Melbourne,2013,18,66.1
+Hawthorn,2014,1,111.8
+Port Adelaide,2014,2,100.4
+Adelaide,2014,3,98.9
+Sydney,2014,4,97.2
+West Coast,2014,5,93.0
+Geelong,2014,6,91.4
+North Melbourne,2014,7,91.3
+Fremantle,2014,8,90.9
+Gold Coast,2014,9,87.1
+Carlton,2014,10,86.0
+Richmond,2014,11,85.3
+Essendon,2014,12,83.0
+Western Bulldogs,2014,13,81.1
+Greater Western Sydney,2014,14,80.9
+Collingwood,2014,15,80.3
+Brisbane Lions,2014,16,69.6
+St Kilda,2014,17,67.3
+Melbourne,2014,18,60.7
+Hawthorn,2015,1,109.7
+West Coast,2015,2,102.7
+Adelaide,2015,3,99.0
+Western Bulldogs,2015,4,95.8
+North Melbourne,2015,5,92.0
+Port Adelaide,2015,6,91.0
+Collingwood,2015,7,89.6
+Geelong,2015,8,88.2
+Sydney,2015,9,88.2
+Richmond,2015,10,87.7
+Greater Western Sydney,2015,11,85.1
+Fremantle,2015,12,83.0
+St Kilda,2015,13,77.0
+Gold Coast,2015,14,74.2
+Essendon,2015,15,71.8
+Melbourne,2015,16,71.5
+Brisbane Lions,2015,17,70.8
+Carlton,2015,18,69.3
+Adelaide,2016,1,112.8
+Greater Western Sydney,2016,2,106.4
+Geelong,2016,3,99.2
+Sydney,2016,4,98.4
+West Coast,2016,5,97.1
+Hawthorn,2016,6,95.9
+Port Adelaide,2016,7,93.4
+St Kilda,2016,8,88.8
+North Melbourne,2016,9,88.5
+Melbourne,2016,10,88.4
+Collingwood,2016,11,86.8
+Western Bulldogs,2016,12,86.2
+Gold Coast,2016,13,80.8
+Brisbane Lions,2016,14,80.5
+Richmond,2016,15,77.9
+Fremantle,2016,16,71.5
+Carlton,2016,17,71.3
+Essendon,2016,18,65.3
+Adelaide,2017,1,107.8
+Port Adelaide,2017,2,97.6
+Essendon,2017,3,95.3
+Geelong,2017,4,93.9
+Sydney,2017,5,93.9
+Greater Western Sydney,2017,6,92.8
+Melbourne,2017,7,92.5
+Richmond,2017,8,91.8
+North Melbourne,2017,9,90.1
+Collingwood,2017,10,88.4
+West Coast,2017,11,87.5
+St Kilda,2017,12,87.5
+Brisbane Lions,2017,13,85.3
+Hawthorn,2017,14,84.7
+Western Bulldogs,2017,15,84.4
+Gold Coast,2017,16,79.8
+Fremantle,2017,17,73.0
+Carlton,2017,18,72.5
+Melbourne,2018,1,101.3
+Richmond,2018,2,95.7
+West Coast,2018,3,91.9
+Geelong,2018,4,90.9
+Collingwood,2018,5,90.6
+North Melbourne,2018,6,88.6
+Adelaide,2018,7,88.2
+Essendon,2018,8,87.8
+Hawthorn,2018,9,87.8
+Greater Western Sydney,2018,10,84.8
+Brisbane Lions,2018,11,83.0
+Port Adelaide,2018,12,80.9
+Sydney,2018,13,80.5
+St Kilda,2018,14,73.0
+Western Bulldogs,2018,15,71.6
+Fremantle,2018,16,70.7
+Carlton,2018,17,61.5
+Gold Coast,2018,18,59.5
+Brisbane Lions,2019,1,89.5
+Richmond,2019,2,88.1
+Geelong,2019,3,87.6
+West Coast,2019,4,86.9
+Western Bulldogs,2019,5,86.8
+Greater Western Sydney,2019,6,84.7
+Collingwood,2019,7,83.2
+North Melbourne,2019,8,82.9
+Port Adelaide,2019,9,82.1
+Adelaide,2019,10,80.7
+Hawthorn,2019,11,79.2
+Sydney,2019,12,77.5
+Essendon,2019,13,76.7
+St Kilda,2019,14,74.8
+Carlton,2019,15,73.1
+Fremantle,2019,16,71.8
+Melbourne,2019,17,71.3
+Gold Coast,2019,18,61.4
+Geelong,2020,1,71.8
+Brisbane Lions,2020,2,68.2
+Port Adelaide,2020,3,67.5
+St Kilda,2020,4,67.1
+Richmond,2020,5,66.5
+West Coast,2020,6,65.0
+Western Bulldogs,2020,7,64.8
+Melbourne,2020,8,62.5
+Carlton,2020,9,59.8
+Greater Western Sydney,2020,10,59.2
+Hawthorn,2020,11,59.1
+Gold Coast,2020,12,58.6
+Collingwood,2020,13,56.5
+Essendon,2020,14,55.2
+Sydney,2020,15,52.4
+Fremantle,2020,16,50.9
+North Melbourne,2020,17,50.5
+Adelaide,2020,18,48.6
+Brisbane Lions,2021,1,94.5
+Western Bulldogs,2021,2,90.0
+Melbourne,2021,3,89.8
+Sydney,2021,4,89.5
+Essendon,2021,5,86.5
+Port Adelaide,2021,6,84.0
+Geelong,2021,7,81.3
+West Coast,2021,8,79.6
+Greater Western Sydney,2021,9,79.6
+Carlton,2021,10,79.4
+Richmond,2021,11,79.2
+St Kilda,2021,12,74.7
+Hawthorn,2021,13,74.0
+Adelaide,2021,14,73.5
+Fremantle,2021,15,71.7
+Collingwood,2021,16,70.8
+North Melbourne,2021,17,66.3
+Gold Coast,2021,18,65.0
+Geelong,2022,1,99.1
+Richmond,2022,2,98.7
+Brisbane Lions,2022,3,95.8
+Sydney,2022,4,92.2
+Western Bulldogs,2022,5,88.4
+Melbourne,2022,6,86.8
+Gold Coast,2022,7,85.0
+Carlton,2022,8,84.4
+Collingwood,2022,9,83.4
+Port Adelaide,2022,10,82.1
+Hawthorn,2022,11,81.2
+Essendon,2022,12,79.0
+Adelaide,2022,13,78.2
+Fremantle,2022,14,78.0
+St Kilda,2022,15,77.4
+Greater Western Sydney,2022,16,74.1
+West Coast,2022,17,65.0
+North Melbourne,2022,18,60.8
+Adelaide,2023,1,95.3
+Brisbane Lions,2023,2,94.9
+Port Adelaide,2023,3,91.8
+Geelong,2023,4,90.8
+Collingwood,2023,5,90.4
+Sydney,2023,6,88.2
+Melbourne,2023,7,88.1
+Greater Western Sydney,2023,8,87.3
+Western Bulldogs,2023,9,83.4
+Carlton,2023,10,82.0
+Richmond,2023,11,80.7
+Gold Coast,2023,12,80.0
+Essendon,2023,13,79.9
+Fremantle,2023,14,79.8
+St Kilda,2023,15,77.2
+Hawthorn,2023,16,73.3
+North Melbourne,2023,17,72.0
+West Coast,2023,18,61.7
+Sydney,2024,1,95.6
+Geelong,2024,2,95.5
+Brisbane Lions,2024,3,94.4
+Western Bulldogs,2024,4,93.0
+Carlton,2024,5,92.6
+Hawthorn,2024,6,90.4
+Greater Western Sydney,2024,7,88.6
+Collingwood,2024,8,86.6
+Fremantle,2024,9,85.4
+Port Adelaide,2024,10,84.6
+Gold Coast,2024,11,83.7
+Adelaide,2024,12,82.9
+Essendon,2024,13,82.3
+Melbourne,2024,14,77.6
+St Kilda,2024,15,76.0
+North Melbourne,2024,16,70.4
+West Coast,2024,17,69.3
+Richmond,2024,18,65.4
+Western Bulldogs,2025,1,108.4
+Geelong,2025,2,104.9
+Adelaide,2025,3,96.0
+Gold Coast,2025,4,92.0
+Greater Western Sydney,2025,5,91.8
+Brisbane Lions,2025,6,91.0
+Hawthorn,2025,7,89.9
+Fremantle,2025,8,85.7
+Collingwood,2025,9,85.6
+Melbourne,2025,10,82.7
+Sydney,2025,11,80.2
+St Kilda,2025,12,80.0
+North Melbourne,2025,13,78.5
+Carlton,2025,14,78.2
+Port Adelaide,2025,15,74.1
+Essendon,2025,16,66.7
+West Coast,2025,17,63.7
+Richmond,2025,18,63.0
+Sydney,2026,1,110.2
+Brisbane Lions,2026,2,109.6
+Geelong,2026,3,102.7
+Melbourne,2026,4,98.2
+Hawthorn,2026,5,98.2
+Fremantle,2026,6,97.0
+Adelaide,2026,7,94.0
+Greater Western Sydney,2026,8,90.1
+St Kilda,2026,9,88.3
+Collingwood,2026,10,88.1
+Gold Coast,2026,11,87.4
+Carlton,2026,12,86.2
+North Melbourne,2026,13,84.0
+Western Bulldogs,2026,14,82.6
+Port Adelaide,2026,15,78.4
+West Coast,2026,16,70.2
+Essendon,2026,17,69.6
+Richmond,2026,18,64.5

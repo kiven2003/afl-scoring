@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Choropleth of games hosted per 100,000 residents in each state, with values labelled.",
+  "width": 520,
+  "height": 470,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [-18, -36],
+    "rotate": [-134, 0],
+    "center": [0, -27.5],
+    "scale": 745,
+    "translate": [262, 235]
+  },
+  "layer": [
+    {
+      "data": {"url": "data/aus_states.topojson", "format": {"type": "topojson", "feature": "states"}},
+      "transform": [
+        {
+          "lookup": "properties.STATE_NAME",
+          "from": {
+            "data": {"url": "data/states.csv"},
+            "key": "state",
+            "fields": ["state", "games", "pop_k", "per100k"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1.5},
+      "encoding": {
+        "color": {
+          "field": "per100k",
+          "type": "quantitative",
+          "title": "Games per 100,000 residents",
+          "scale": {
+            "type": "threshold",
+            "domain": [0.5, 1, 1.5],
+            "range": ["#fff3b0", "#ffd200", "#8a6500", "#111111"]
+          },
+          "legend": {"orient": "bottom-left", "direction": "horizontal", "symbolType": "square"}
+        },
+        "tooltip": [
+          {"field": "state", "title": "State"},
+          {"field": "games", "title": "Games"},
+          {"field": "pop_k", "title": "Residents (thousands)", "format": ",.1f"},
+          {"field": "per100k", "title": "Per 100,000 residents", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"lat": -32.5, "lon": 146.5, "rate": 0.24, "label": "0.24"},
+          {"lat": -36.9, "lon": 144.2, "rate": 1.5, "label": "1.50"},
+          {"lat": -23, "lon": 144.5, "rate": 0.37, "label": "0.37"},
+          {"lat": -30.5, "lon": 135.5, "rate": 1.67, "label": "1.67"},
+          {"lat": -26, "lon": 121.5, "rate": 0.84, "label": "0.84"},
+          {"lat": -42, "lon": 146.6, "rate": 0.86, "label": "0.86"},
+          {"lat": -19.5, "lon": 133.4, "rate": 1.12, "label": "1.12"},
+          {"lat": -35.6, "lon": 152.3, "rate": 0.61, "label": "ACT 0.61"}
+        ]
+      },
+      "mark": {"type": "text", "fontSize": 13, "fontWeight": 600},
+      "encoding": {
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "text": {"field": "label"},
+        "color": {"condition": {"test": "datum.rate >= 1", "value": "white"}, "value": "#0b0b0b"}
+      }
+    }
+  ]
+}
